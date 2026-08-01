@@ -1,0 +1,1541 @@
+/* ==========================================================
+   FORGE
+   Charte graphique officielle v1.0
+========================================================== */
+
+:root{
+
+    --forge-blue:#1F3B5A;
+    --forge-blue-light:#31567A;
+    --forge-gold:#D6A74E;
+
+    --background:#F3F5F8;
+    --card:#FFFFFF;
+
+    --text:#243241;
+    --text-light:#73808F;
+
+    --border:#DCE2E8;
+
+    --shadow:
+        0 10px 30px rgba(0,0,0,.08);
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:
+        "Segoe UI",
+        Inter,
+        Arial,
+        sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+}
+
+#app{
+
+    padding:15px 25px;
+
+}
+
+
+/* ==========================================================
+   ACCUEIL
+========================================================== */
+
+.home{
+
+    max-width:600px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo{
+
+    display:block;
+
+    width:240px;
+
+    height:auto;
+
+    margin:30px auto 25px auto;
+
+    filter:drop-shadow(0 8px 20px rgba(0,0,0,.18));
+
+    animation: apparitionLogo .6s ease;
+
+}
+
+
+/* ==========================================================
+   SOUS TITRE
+========================================================== */
+
+.subtitle{
+
+    text-align:center;
+
+    color:#6d7c92;
+
+    font-size:1rem;
+
+    line-height:1.5;
+
+    margin-bottom:40px;
+
+}
+
+
+/* ==========================================================
+   MENU
+========================================================== */
+
+.menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+/* ==========================================================
+   BOUTONS
+========================================================== */
+
+button{
+
+    background:var(--forge-blue);
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:18px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:
+        background .20s ease,
+        transform .15s ease,
+        box-shadow .20s ease;
+
+}
+
+/* ==========================================================
+   SURVOL
+========================================================== */
+
+button:hover{
+
+    background:#3B628A;
+
+    transform:translateY(-2px);
+
+    filter:brightness(108%);
+
+    box-shadow:
+        0 10px 24px rgba(0,0,0,.16);
+
+}
+
+/* ==========================================================
+   CLIC
+========================================================== */
+
+button:active{
+
+    background:#29486A;
+
+    transform:translateY(1px);
+
+    filter:brightness(92%);
+
+    box-shadow:
+        0 3px 8px rgba(0,0,0,.14);
+
+}
+
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+    margin-top:20px;
+
+    color:var(--text-light);
+
+    font-size:14px;
+
+}
+
+
+/* ==========================================================
+   CARTES
+   (servira aux prochaines vues)
+========================================================== */
+
+.card{
+
+    background:var(--card);
+
+    border-radius:16px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/* ==========================================================
+   TITRES
+========================================================== */
+
+h1,h2,h3{
+
+    color:var(--forge-blue);
+
+    font-weight:700;
+
+}
+/* ==========================================================
+   DESIGN SYSTEM
+========================================================== */
+
+/* Carte principale */
+
+.card{
+
+    background:var(--card);
+
+    border-radius:16px;
+
+    padding:32px;
+
+    box-shadow:var(--shadow);
+
+    border:1px solid var(--border);
+
+}
+
+
+/* Titres de section */
+
+.section-title{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:var(--forge-blue);
+
+    margin-bottom:10px;
+
+}
+
+.section-subtitle{
+
+    color:var(--text-light);
+
+    margin-bottom:30px;
+
+}
+
+
+/* Séparateur */
+
+.separator{
+
+    width:100%;
+
+    height:1px;
+
+    background:var(--border);
+
+    margin:30px 0;
+
+}
+
+
+/* Champs */
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    font-size:16px;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    background:white;
+
+    color:var(--text);
+
+    transition:.2s;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:none;
+
+    border-color:var(--forge-blue);
+
+    box-shadow:0 0 0 3px rgba(31,59,90,.12);
+
+}
+
+
+/* Labels */
+
+label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+
+/* Barre de progression */
+
+.progress{
+
+    width:100%;
+
+    height:10px;
+
+    background:#E8EDF2;
+
+    border-radius:100px;
+
+    overflow:hidden;
+
+}
+
+.progress-bar{
+
+    height:100%;
+
+    width:0%;
+
+    background:linear-gradient(
+        90deg,
+        var(--forge-blue),
+        var(--forge-gold)
+    );
+
+    transition:.25s;
+
+}
+
+
+/* Badges */
+
+.badge{
+
+    display:inline-block;
+
+    padding:6px 12px;
+
+    border-radius:100px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.badge-success{
+
+    background:#DDF5E4;
+
+    color:#2E7D32;
+
+}
+
+.badge-warning{
+
+    background:#FFF1D6;
+
+    color:#B26A00;
+
+}
+
+.badge-danger{
+
+    background:#FFE1E1;
+
+    color:#C62828;
+
+}
+
+.badge-neutral{
+
+    background:#ECEFF3;
+
+    color:#607080;
+
+}
+
+
+/* Boutons secondaires */
+
+.button-secondary{
+
+    background:white;
+
+    color:var(--forge-blue);
+
+    border:1px solid var(--border);
+
+}
+
+.button-secondary:hover{
+
+    background:#F5F8FB;
+
+}
+/* ==========================================================
+   NOTATION
+========================================================== */
+
+.rating{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:10px;
+
+    margin-top:12px;
+
+}
+
+.rating button{
+
+    padding:10px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    border-radius:10px;
+
+    border:2px solid transparent;
+
+    transition:.15s;
+
+}
+
+.rating button.selected{
+
+    border-color:#111;
+
+    transform:scale(.98);
+
+}
+
+.rating-attendu{
+
+    background:#2E7D32;
+
+}
+
+.rating-amelioration{
+
+    background:#F9A825;
+
+}
+
+.rating-nonfait{
+
+    background:#C62828;
+
+}
+
+.rating-na{
+
+    background:#8E99A8;
+
+}
+/* ==========================================================
+   QUESTIONNAIRE
+========================================================== */
+
+.rating-button{
+
+    min-height:44px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+.rating-button.selected{
+
+    outline:4px solid rgba(255,255,255,.55);
+
+    box-shadow:
+        0 0 0 3px var(--forge-blue),
+        var(--shadow);
+
+    transform:scale(.97);
+
+}
+
+.question-navigation{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    margin-top:30px;
+
+}
+
+.question-navigation button{
+
+    flex:1;
+
+}
+
+button:disabled{
+
+    opacity:.45;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+button:disabled:hover{
+
+    background:var(--forge-blue);
+
+    transform:none;
+
+}
+/* ==========================================================
+   DEBRIEF
+   Dashboard
+========================================================== */
+
+.debrief-dashboard{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin:30px 0;
+
+}
+
+.dashboard-card{
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.2s;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.dashboard-number{
+
+    font-size:36px;
+
+    font-weight:800;
+
+    color:var(--forge-blue);
+
+    margin-bottom:8px;
+
+}
+
+.dashboard-label{
+
+    color:var(--text-light);
+
+    font-size:15px;
+
+}
+
+.dashboard-green{
+
+    border-left:6px solid #2E7D32;
+
+}
+
+.dashboard-orange{
+
+    border-left:6px solid #F9A825;
+
+}
+
+.dashboard-red{
+
+    border-left:6px solid #C62828;
+
+}
+
+
+/* ==========================================================
+   TAUX DE CONFORMITE
+========================================================== */
+
+.conformite{
+
+    margin:35px 0 45px 0;
+
+}
+
+.conformite-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:10px;
+
+}
+
+.conformite-header strong{
+
+    color:var(--forge-blue);
+
+    font-size:22px;
+
+}
+
+.conformite-barre{
+
+    width:100%;
+
+    height:18px;
+
+    background:#E7EBF0;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+}
+
+.conformite-remplissage{
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        #2E7D32,
+        #4CAF50
+    );
+
+    transition:width .6s ease;
+
+}
+/* ==========================================================
+   DEBRIEF
+   Sections
+========================================================== */
+
+.debrief-section{
+
+    margin-top:45px;
+
+}
+
+.debrief-section h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:20px;
+
+    padding-bottom:10px;
+
+    border-bottom:2px solid var(--border);
+
+}
+
+.debrief-section .badge{
+
+    margin-left:auto;
+
+    background:var(--forge-blue);
+
+    color:white;
+
+}
+
+
+/* ==========================================================
+   CARTES
+========================================================== */
+
+.debrief-card{
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:22px;
+
+    margin-bottom:18px;
+
+    box-shadow:var(--shadow);
+
+    transition:
+        transform .15s,
+        box-shadow .2s;
+
+}
+
+.debrief-card:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 14px 34px rgba(0,0,0,.10);
+
+}
+
+.debrief-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+    margin-bottom:15px;
+
+}
+
+.debrief-header h3{
+
+    flex:1;
+
+    margin:0;
+
+    color:var(--forge-blue);
+
+    font-size:20px;
+
+}
+
+.section-badge{
+
+    background:#EEF3F8;
+
+    color:var(--forge-blue);
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+}
+
+.debrief-description{
+
+    color:var(--text-light);
+
+    line-height:1.6;
+
+    margin-bottom:18px;
+
+}
+
+.debrief-commentaire{
+
+    background:#F8FAFC;
+
+    border-left:4px solid var(--forge-gold);
+
+    border-radius:10px;
+
+    padding:16px;
+
+}
+
+.debrief-commentaire strong{
+
+    display:block;
+
+    color:var(--forge-blue);
+
+    margin-bottom:8px;
+
+}
+
+.debrief-commentaire p{
+
+    margin:0;
+
+    line-height:1.6;
+
+}
+/* ==========================================================
+   DEBRIEF
+   Zone manager
+========================================================== */
+
+.debrief-zone{
+
+    margin-top:50px;
+
+}
+
+.debrief-zone label{
+
+    margin-top:20px;
+
+    display:block;
+
+}
+
+.debrief-zone textarea{
+
+    resize:vertical;
+
+    min-height:120px;
+
+}
+
+.debrief-zone input{
+
+    max-width:260px;
+
+}
+
+
+/* ==========================================================
+   Boutons
+========================================================== */
+
+.question-navigation{
+
+    margin-top:40px;
+
+}
+
+.question-navigation button{
+
+    min-height:58px;
+
+    font-size:16px;
+
+}
+
+
+/* ==========================================================
+   Animations
+========================================================== */
+
+.debrief-dashboard,
+.debrief-section,
+.debrief-card{
+
+    animation:fadeUp .45s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.question-label{
+
+    display:block;
+
+    margin:12px 0 6px;
+
+    font-weight:600;
+
+}
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width:1100px){
+
+    .debrief-dashboard{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:700px){
+
+    #app{
+
+        padding:20px;
+
+    }
+
+    .card{
+
+        padding:22px;
+
+    }
+
+    .debrief-dashboard{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .debrief-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .section-badge{
+
+        margin-top:10px;
+
+    }
+
+    .question-navigation{
+
+        flex-direction:column;
+
+    }
+
+}
+
+
+/* ==========================================================
+   Petites finitions
+========================================================== */
+
+.debrief-card strong{
+
+    color:var(--forge-blue);
+
+}
+
+.debrief-card p{
+
+    margin-top:8px;
+
+}
+
+.debrief-card:hover .section-badge{
+
+    background:var(--forge-blue);
+
+    color:white;
+
+    transition:.2s;
+
+}
+
+.dashboard-card:hover .dashboard-number{
+
+    transform:scale(1.08);
+
+    transition:.2s;
+
+}
+
+.conformite-header span{
+
+    color:var(--text-light);
+
+    font-weight:600;
+
+}
+/* ==========================================================
+   ANALYSE
+========================================================== */
+
+.analyse-ligne{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:14px 0;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.analyse-ligne:last-child{
+
+    border-bottom:none;
+
+}
+
+.analyse-icone{
+
+    width:34px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.analyse-check{
+
+    width:26px;
+
+    height:26px;
+
+    border-radius:50%;
+
+    background:#2E7D32;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:700;
+
+    font-size:14px;
+
+    box-shadow:0 4px 10px rgba(46,125,50,.25);
+
+}
+
+.analyse-texte{
+
+    flex:1;
+
+    font-size:16px;
+
+    color:var(--text);
+
+}
+
+@keyframes apparitionLogo{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-20px) scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+.footer{
+
+.footer{
+
+    margin-top:55px;
+
+    padding-top:20px;
+
+    border-top:1px solid var(--border);
+
+    text-align:center;
+
+    color:#7b8798;
+
+    font-size:12px;
+
+    line-height:1.7;
+
+}
+
+}
+
+.footer strong{
+
+    color:#55606f;
+
+    font-weight:600;
+
+}
+/* ==========================================
+   LOGO FORGE
+========================================== */
+
+.logo-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    margin-top:5px;
+
+    margin-bottom:0;
+
+}
+
+.logo-centre{
+
+    width:400px;
+
+    height:auto;
+
+    margin-bottom:-80px;
+
+}
+
+.logo-forge{
+
+    width:360px;
+
+    height:auto;
+
+    margin-top:-20px;
+    margin-bottom:-30px;
+
+}
+/*==================================================
+ANIMATIONS ACCUEIL
+==================================================*/
+
+.intro-logo,
+.intro-forge,
+.menu-item{
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+}
+
+/* Apparition logo */
+
+.intro-logo{
+
+    animation:introLogo .55s ease forwards;
+
+}
+
+/* Apparition titre */
+
+.intro-forge{
+
+    animation:introForge .55s ease forwards;
+
+    animation-delay:.20s;
+
+}
+
+/* Apparition boutons */
+
+.menu-item:nth-child(1){
+
+    animation:introMenu .45s ease forwards;
+
+    animation-delay:.45s;
+
+}
+
+.menu-item:nth-child(2){
+
+    animation:introMenu .45s ease forwards;
+
+    animation-delay:.55s;
+
+}
+
+.menu-item:nth-child(3){
+
+    animation:introMenu .45s ease forwards;
+
+    animation-delay:.65s;
+
+}
+
+.menu-item:nth-child(4){
+
+    animation:introMenu .45s ease forwards;
+
+    animation-delay:.75s;
+
+}
+
+/*==========================
+KEYFRAMES
+==========================*/
+
+@keyframes introLogo{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            translateY(20px)
+            scale(.94);
+
+    }
+
+    70%{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1.03);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+@keyframes introForge{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes introMenu{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================================
+   VERSION MOBILE
+========================================================== */
+
+@media (max-width:700px){
+
+    /* -----------------------------
+       Accueil
+    ------------------------------ */
+
+    .home{
+
+        padding:10px;
+
+    }
+
+    .logo-centre{
+
+        width:240px;
+
+    }
+
+    .logo-forge{
+
+        width:220px;
+
+        margin-top:-20px;
+
+        margin-bottom:6px;
+
+    }
+
+    .menu{
+
+        gap:12px;
+
+        margin-top:4px;
+
+    }
+    /* -----------------------------
+   Questionnaire
+------------------------------ */
+
+.card{
+
+    padding:14px;
+
+}
+
+.card h2{
+
+    margin:4px 0;
+
+}
+
+.subtitle{
+
+    margin:4px 0 8px;
+
+    font-size:14px;
+
+}
+
+.separator{
+
+    margin:10px 0;
+
+}
+.rating{
+
+    gap:8px;
+
+    margin-top:8px;
+
+}
+
+.rating-button{
+
+    min-height:44px;
+
+}
+
+.rating button{
+
+    padding:10px;
+
+    font-size:14px;
+
+}
+textarea{
+
+    min-height:70px;
+
+}
+
+    /* -----------------------------
+       Boutons
+    ------------------------------ */
+
+    button{
+
+        padding:14px;
+
+        font-size:16px;
+
+    }
+
+    /* -----------------------------
+       Champs de formulaire
+    ------------------------------ */
+
+    input,
+    select,
+    textarea{
+
+        padding:10px 14px;
+
+        font-size:15px;
+
+        border-radius:8px;
+
+    }
+    /* ==========================================================
+   FORMULAIRES
+========================================================== */
+
+.formulaire{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    margin-top:20px;
+
+}
+
+.formulaire label{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:var(--forge-blue);
+
+    margin-top:6px;
+
+}
+/* -----------------------------
+   Cartes
+------------------------------ */
+
+.card{
+
+    padding:20px;
+
+}
+/* -----------------------------
+   Formulaires
+------------------------------ */
+
+.formulaire{
+
+    gap:6px;
+
+    margin-top:8px;
+
+}
+
+.formulaire label{
+
+    font-size:16px;
+
+    margin-top:2px;
+
+}
+.question-label{
+
+    margin:8px 0 4px;
+
+}
+}
