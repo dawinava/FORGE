@@ -1538,4 +1538,31 @@ textarea{
     margin:8px 0 4px;
 
 }
+#sectionTitre{
+
+    font-size:28px;
+
+    margin-bottom:2px;
+
+}
+
+#questionTitre{
+
+    font-size:22px;
+
+    line-height:1.1;
+
+    margin:8px 0 4px;
+
+}
+
+#questionDescription{
+
+    font-size:14px;
+
+    line-height:1.25;
+
+    margin-bottom:10px;
+
+}
 }
