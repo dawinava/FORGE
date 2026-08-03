@@ -145,10 +145,26 @@ document
     */
 
     if (render === vueQuestionnaire) {
-
+console.log("QUESTIONNAIRE INITIALISÉ");
         afficherQuestion();
 
         initialiserBoutonsNotation();
+
+        document
+    .getElementById("btnSkipDebug")
+    ?.addEventListener("click", () => {
+
+        genererCoachingAleatoire();
+
+afficherVue(vueAnalyse);
+
+setTimeout(() => {
+
+    lancerAnalyse();
+
+}, 50);
+
+    });
 
         document
             .getElementById("btnPrecedent")
