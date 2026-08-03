@@ -104,6 +104,12 @@ function vueQuestionnaire() {
                         id="btnSuivant">
 
                         Suivant →
+                        
+                        <button id="btnSkipDebug">
+
+    ⚡ Skip Debug
+
+</button>
 
                     </button>
 

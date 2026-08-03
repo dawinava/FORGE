@@ -1,0 +1,49 @@
+@media print {
+
+    body {
+
+        background: white;
+
+    }
+
+    .question-navigation,
+    nav,
+    footer,
+    .bottom-nav,
+    button {
+
+        display: none !important;
+
+    }
+
+    .card {
+
+        box-shadow: none !important;
+
+        border: none !important;
+
+        margin: 0;
+
+        padding: 0;
+
+    }
+
+    .debrief-card {
+
+        break-inside: avoid;
+
+        page-break-inside: avoid;
+
+    }
+
+    .debrief-section {
+
+        break-inside: avoid;
+
+        page-break-inside: avoid;
+
+        margin-bottom: 25px;
+
+    }
+
+}

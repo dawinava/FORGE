@@ -782,45 +782,41 @@ button:disabled:hover{
 
 .debrief-header{
 
-    display:flex;
+    display:block;
 
-    justify-content:space-between;
+    margin-bottom:18px;
 
-    align-items:flex-start;
+    padding-bottom:12px;
 
-    gap:15px;
-
-    margin-bottom:15px;
+    border-bottom:1px solid #E4E8EE;
 
 }
 
 .debrief-header h3{
 
-    flex:1;
-
-    margin:0;
+    margin:0 0 12px 0;
 
     color:var(--forge-blue);
 
-    font-size:20px;
+    font-size:22px;
 
 }
 
 .section-badge{
 
+    display:inline-block;
+
     background:#EEF3F8;
 
     color:var(--forge-blue);
 
-    padding:6px 12px;
+    padding:6px 14px;
 
     border-radius:999px;
 
     font-size:13px;
 
     font-weight:700;
-
-    white-space:nowrap;
 
 }
 
@@ -1563,6 +1559,34 @@ textarea{
     line-height:1.25;
 
     margin-bottom:10px;
+
+}
+.rapport-header {
+
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #223b5f;
+
+}
+
+.rapport-header h1 {
+
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.rapport-infos {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 30px;
+
+}
+
+.rapport-infos p {
+
+    margin: 0;
 
 }
 }
