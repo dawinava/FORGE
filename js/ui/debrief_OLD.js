@@ -1,7 +1,6 @@
 function vueDebrief() {
 
-    const resultat =
-        coaching.debrief.resultat ?? genererDebrief();
+    const resultat = coaching.debrief.resultat ?? genererDebrief();
 
     const total =
         resultat.attendu.length +
@@ -11,34 +10,22 @@ function vueDebrief() {
     const conformite =
         total === 0
             ? 0
-            : Math.round(
-                (resultat.attendu.length / total) * 100
-            );
+            : Math.round((resultat.attendu.length / total) * 100);
 
     return `
 
         <div class="card">
 
-            <h1>
-
-                Débrief du coaching
-
-            </h1>
-
-            ${genererDashboard(
-                resultat,
-                conformite
-            )}
+            <h1>Débrief du coaching</h1>
 
             <h2 class="rapport-titre">
 
-                Rapport détaillé du coaching
+    Rapport détaillé du coaching
 
-            </h2>
+</h2>
 
-            ${genererRapportComplet()}
-
-            ${genererZoneManager()}
+${genererRapportComplet()}
+${genererZoneManager()}
 
         </div>
 
@@ -46,10 +33,7 @@ function vueDebrief() {
 
 }
 
-function genererDashboard(
-    resultat,
-    conformite
-) {
+function genererDashboard(resultat, conformite) {
 
     return `
 
@@ -158,6 +142,7 @@ function genererDashboard(
     `;
 
 }
+
 function genererRapportComplet() {
 
     let html = "";
@@ -168,11 +153,7 @@ function genererRapportComplet() {
 
             <div class="debrief-section">
 
-                <h2>
-
-                    ${section.titre}
-
-                </h2>
+                <h2>${section.titre}</h2>
 
         `;
 
@@ -218,12 +199,7 @@ function genererRapportComplet() {
 
                     <div class="debrief-header">
 
-                        <h3>
-
-                            ${icone}
-                            ${critere.titre}
-
-                        </h3>
+                        <h3>${icone} ${critere.titre}</h3>
 
                         <span class="section-badge">
 
@@ -242,28 +218,18 @@ function genererRapportComplet() {
             `;
 
             if (
-
                 reponse &&
                 reponse.commentaire &&
                 reponse.commentaire.trim() !== ""
-
             ) {
 
                 html += `
 
                     <div class="debrief-commentaire">
 
-                        <strong>
+                        <strong>Observation</strong>
 
-                            Observation du coach
-
-                        </strong>
-
-                        <p>
-
-                            ${reponse.commentaire}
-
-                        </p>
+                        <p>${reponse.commentaire}</p>
 
                     </div>
 
@@ -289,7 +255,132 @@ function genererRapportComplet() {
 
     return html;
 
+
+
+    let html = "";
+
+    questionnaireComplet.forEach(section => {
+
+        html += `
+
+            <div class="debrief-section">
+
+                <h2>
+
+                    ${section.titre}
+
+                </h2>
+
+        `;
+
+        section.criteres.forEach(critere =>{ 
+
+    const reponse =
+    coaching.questionnaire.reponses[critere.id];
+                ;
+
+            let icone = "⚪";
+            let libelle = "Non évalué";
+
+            if (reponse) {
+
+                switch (reponse.note) {
+
+                    case "attendu":
+                        icone = "🟢";
+                        libelle = "Conforme";
+                        break;
+
+                    case "amelioration":
+                        icone = "🟠";
+                        libelle = "À améliorer";
+                        break;
+
+                    case "nonfait":
+                        icone = "🔴";
+                        libelle = "Non réalisé";
+                        break;
+
+                    case "na":
+                        icone = "⚪";
+                        libelle = "Non applicable";
+                        break;
+
+                }
+
+            }
+
+            html += `
+
+                <div class="debrief-card">
+
+                    <div class="debrief-header">
+
+                        <h3>
+
+                            ${icone} ${critere.titre}
+
+                        </h3>
+
+                        <span class="section-badge">
+
+                            ${libelle}
+
+                        </span>
+
+                    </div>
+
+                    <div class="debrief-description">
+
+                        ${critere.description}
+
+                    </div>
+
+                    ${
+                        reponse && reponse.commentaire.trim() !== ""
+
+                            ?
+
+                            `
+
+                                <div class="debrief-commentaire">
+
+                                    <strong>Observation</strong>
+
+                                    <p>
+
+                                        ${reponse.commentaire}
+
+                                    </p>
+
+                                </div>
+
+                            `
+
+                            :
+
+                            ""
+
+                    }
+
+                </div>
+
+            `;
+
+        });
+
+        html += `
+
+            </div>
+
+        `;
+
+    });
+
+    return html;
+
 }
+
 function genererZoneManager() {
 
     return `
@@ -298,7 +389,7 @@ function genererZoneManager() {
 
             <h2>
 
-                Synthèse du débrief
+                📝 Débrief manager
 
             </h2>
 
@@ -310,8 +401,8 @@ function genererZoneManager() {
 
             <textarea
                 id="commentairesManager"
-                rows="6"
-                placeholder="Synthèse de l'entretien..."
+                rows="5"
+                placeholder="Commentaires généraux..."
             >${coaching.debrief.commentaires}</textarea>
 
             <label>
@@ -322,13 +413,13 @@ function genererZoneManager() {
 
             <textarea
                 id="planAction"
-                rows="6"
-                placeholder="Actions décidées avec le collaborateur..."
+                rows="5"
+                placeholder="Plan d'action..."
             >${coaching.debrief.planAction}</textarea>
 
             <label>
 
-                Deadline
+                Délai
 
             </label>
 
@@ -340,24 +431,23 @@ function genererZoneManager() {
 
             <div class="question-navigation">
 
-                <button
-                    id="btnRetourQuestionnaire"
-                    class="button-secondary">
+                <button id="btnRetourQuestionnaire">
 
                     ← Retour au questionnaire
 
                 </button>
 
-                <button
-                    id="btnGenererPdf">
+                <button id="btnGenererPdf">
 
-                    🖨️ Finaliser le coaching
+                    Générer le PDF
 
                 </button>
 
             </div>
 
         </div>
+
+
 
     `;
 

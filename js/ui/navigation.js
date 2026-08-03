@@ -175,16 +175,22 @@ document
         }
 
         if (!sauvegarderQuestionCourante()) return;
+const btnSuivant =
+    document.getElementById("btnSuivant");
 
-        if (questionnaireEngine.estDerniereQuestion()) {
+btnSuivant.textContent =
+    questionnaireEngine.estDerniereQuestion()
+        ? "Terminer le coaching"
+        : "Suivant →";
+       if (questionnaireEngine.estDerniereQuestion()) {
 
-            console.log(coaching);
+    console.log(coaching);
 
-    afficherVue(vueAnalyse);
+    terminerAnalyse();
 
-            return;
+    return;
 
-        }
+}
 
         questionnaireEngine.questionSuivante();
 
@@ -321,21 +327,21 @@ if (render === vueAnalyse) {
         });
 
     document
-        .getElementById("btnGenererPdf")
-        .addEventListener("click", () => {
+    .getElementById("btnGenererPdf")
+    .addEventListener("click", () => {
 
-            coaching.debrief.commentaires =
-                document.getElementById("commentairesManager").value;
+        coaching.debrief.commentaires =
+            document.getElementById("commentairesManager").value;
 
-            coaching.debrief.planAction =
-                document.getElementById("planAction").value;
+        coaching.debrief.planAction =
+            document.getElementById("planAction").value;
 
-            coaching.debrief.delai =
-                document.getElementById("delai").value;
+        coaching.debrief.delai =
+            document.getElementById("delai").value;
 
-            alert("Génération PDF à venir.");
+        window.print();
 
-        });
+    });
 
     return;
 

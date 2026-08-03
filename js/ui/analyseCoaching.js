@@ -226,5 +226,11 @@ function terminerAnalyse() {
 
     }, 550);
     ;
+    <button id="btnExporterPDF">
+    📄 Exporter le PDF
+</button>
+document
+    .getElementById("btnExporterPDF")
+    .addEventListener("click", exporterPDF);
 
 }
