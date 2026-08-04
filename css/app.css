@@ -1590,3 +1590,112 @@ textarea{
 
 }
 }
+.pdf-cover{
+
+    margin:-35px -35px 55px -35px;
+
+    background:white;
+
+}
+
+.pdf-cover-image{
+
+    position:relative;
+
+    width:100%;
+
+    height:360px;
+
+    overflow:visible;
+
+}
+
+.pdf-cover-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center 35%;
+
+    display:block;
+
+}
+
+.pdf-cover-logo{
+
+    position:absolute;
+
+    left:50%;
+
+    top:300px;
+
+    transform:translateX(-50%);
+
+    width:180px;
+
+    height:105px;
+
+    background:white;
+
+    border-radius:0 0 16px 16px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.20);
+
+    z-index:10;
+
+}
+
+.pdf-cover-logo img{
+
+    width:120px;
+
+    height:auto;
+
+}
+
+.pdf-cover-title{
+
+    text-align:center;
+
+    margin-top:75px;
+
+}
+
+.pdf-cover-title h1{
+
+    margin:0;
+
+    font-size:36px;
+
+    font-weight:700;
+
+    color:#17375E;
+
+}
+
+.pdf-cover-title p{
+
+    margin:10px 0 0;
+
+    color:#666;
+
+    font-size:18px;
+
+}
+
+.pdf-cover-card{
+
+    margin:35px auto 0;
+
+    max-width:900px;
+
+}

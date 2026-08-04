@@ -17,6 +17,8 @@ function vueDebrief() {
 
     return `
 
+        ${genererCouverturePDF()}
+
         <div class="card">
 
             <h1>
@@ -358,6 +360,95 @@ function genererZoneManager() {
             </div>
 
         </div>
+
+    `;
+
+}
+function genererCouverturePDF() {
+
+    return `
+
+        <section class="pdf-cover">
+
+            <div class="pdf-cover-image">
+
+                <img
+                    src="assets/images/cover.png"
+                    alt="Couverture">
+
+                <div class="pdf-cover-logo">
+
+                    <img
+                        src="assets/images/logo-free.png"
+                        alt="Free">
+
+                </div>
+
+                <div class="pdf-cover-title">
+
+                    <h1>
+
+                        COACHING COMPLET
+
+                    </h1>
+
+                    <p>
+
+                        Débrief du coaching
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="card pdf-cover-card">
+
+                <h2>
+
+                    Informations du coaching
+
+                </h2>
+
+                <table class="pdf-cover-table">
+
+                    <tr>
+
+                        <th>🏪 Boutique</th>
+
+                        <td>${coaching.informations.boutique}</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>👤 Collaborateur</th>
+
+                        <td>${coaching.informations.collaborateur}</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>🛠 Coach</th>
+
+                        <td>${coaching.informations.coach}</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>📅 Date</th>
+
+                        <td>${coaching.informations.date}</td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </section>
 
     `;
 
