@@ -384,67 +384,57 @@ function genererCouverturePDF() {
 
                 </div>
 
-                <div class="pdf-cover-title">
-
-                    <h1>
-
-                        COACHING COMPLET
-
-                    </h1>
-
-                    <p>
-
-                        Débrief du coaching
-
-                    </p>
-
-                </div>
-
             </div>
 
             <div class="card pdf-cover-card">
 
-                <h2>
+                <h1>
 
-                    Informations du coaching
+                    COACHING COMPLET
 
-                </h2>
+                </h1>
 
-                <table class="pdf-cover-table">
+                <p class="pdf-cover-subtitle">
 
-                    <tr>
+                    Débrief du coaching
 
-                        <th>🏪 Boutique</th>
+                </p>
 
-                        <td>${coaching.informations.boutique}</td>
+                <div class="pdf-cover-grid">
 
-                    </tr>
+                    <div>
 
-                    <tr>
+                        <span>🏪 Boutique</span>
 
-                        <th>👤 Collaborateur</th>
+                        <strong>${coaching.informations.boutique}</strong>
 
-                        <td>${coaching.informations.collaborateur}</td>
+                    </div>
 
-                    </tr>
+                    <div>
 
-                    <tr>
+                        <span>👤 Collaborateur</span>
 
-                        <th>🛠 Coach</th>
+                        <strong>${coaching.informations.collaborateur}</strong>
 
-                        <td>${coaching.informations.coach}</td>
+                    </div>
 
-                    </tr>
+                    <div>
 
-                    <tr>
+                        <span>🛠 Coach</span>
 
-                        <th>📅 Date</th>
+                        <strong>${coaching.informations.coach}</strong>
 
-                        <td>${coaching.informations.date}</td>
+                    </div>
 
-                    </tr>
+                    <div>
 
-                </table>
+                        <span>📅 Date</span>
+
+                        <strong>${coaching.informations.date}</strong>
+
+                    </div>
+
+                </div>
 
             </div>
 
